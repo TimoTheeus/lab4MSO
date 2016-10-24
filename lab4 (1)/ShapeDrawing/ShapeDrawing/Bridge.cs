@@ -36,25 +36,21 @@ public class ScreenDrawer:Bridge
 
 public class SVGWriter : Bridge
 {
-    Stream stream;
     SaveFileDialog saveFileDialog;
     List<string> attributeDrawer;
-    List<int> coords;
 
     public SVGWriter(object sender, EventArgs e)
     {
         attributeDrawer = new List<string>();
-        coords = new List<int>();
+        attributeDrawer.Add("<?xml version=\"1.0\" standalone=\"no\"?> ");
+        attributeDrawer.Add("<!DOCTYPE svg PUBLIC \"-//W3C//DTD SVG 1.1//EN\"");
+        attributeDrawer.Add("\"http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd\" >");
+        attributeDrawer.Add("<svg xmlns = \"http://www.w3.org/2000/svg\" version = \"1.1\" >");
     }
 
     public override void DrawLine(Graphics Canvas, int x, int y, int x2, int y2)
     {
-        attributeDrawer.Add("<polyline points = \"" + x + "," + y + " " + x2 + "," +y2 + "\" style = \"fill: none; stroke: black; stroke - width:1\" />");
-        coords.Add(x);
-        coords.Add(y);
-        coords.Add(x2);
-        coords.Add(y2);
-    
+        attributeDrawer.Add("<polyline points = \"" + x + "," + y + " " + x2 + "," +y2 + "\" style = \"fill: none; stroke: black; stroke - width:1\" />"); 
     }
     public override void DrawEllipse(Graphics Canvas, int x, int y, int width, int height)
     {
@@ -65,9 +61,10 @@ public class SVGWriter : Bridge
     public void MakeFile(object sender, EventArgs e)
     {
 
+        Stream stream;
         saveFileDialog = new SaveFileDialog();
 
-        saveFileDialog.Filter = "TeX files|(*.svg";
+        saveFileDialog.Filter = "svg files|(*.svg";
         saveFileDialog.RestoreDirectory = true;
 
         if (saveFileDialog.ShowDialog() == DialogResult.OK)
@@ -77,10 +74,6 @@ public class SVGWriter : Bridge
 
                 using (StreamWriter writer = new StreamWriter(stream))
                 {
-                    writer.WriteLine("<?xml version=\"1.0\" standalone=\"no\"?> ");
-                    writer.WriteLine("<!DOCTYPE svg PUBLIC \"-//W3C//DTD SVG 1.1//EN\"");
-                    writer.WriteLine("\"http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd\" >");
-                    writer.WriteLine("<svg xmlns = \"http://www.w3.org/2000/svg\" version = \"1.1\" >");
                     foreach (string s in attributeDrawer)
                     {
                         writer.WriteLine(s);

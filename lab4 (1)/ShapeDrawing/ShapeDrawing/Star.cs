@@ -22,8 +22,6 @@ public class Star : Shape
 
 	public override void Draw (Graphics Canvas,Bridge brug)
 	{
-		//Pen pen = new Pen (Color.Black);
-
 		int numPoints = 5;
 		Point[] pts = new Point[numPoints];
 		double rx = width / 2;
