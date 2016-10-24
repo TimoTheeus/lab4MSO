@@ -39,20 +39,28 @@ public class SVGWriter : Bridge
     Stream stream;
     SaveFileDialog saveFileDialog;
     List<string> attributeDrawer;
+    List<int> coords;
 
     public SVGWriter(object sender, EventArgs e)
     {
         attributeDrawer = new List<string>();
+        coords = new List<int>();
     }
 
     public override void DrawLine(Graphics Canvas, int x, int y, int x2, int y2)
     {
-        
+        attributeDrawer.Add("<polyline points = \"" + x + "," + y + " " + x2 + "," +y2 + "\" style = \"fill: none; stroke: black; stroke - width:1\" />");
+        coords.Add(x);
+        coords.Add(y);
+        coords.Add(x2);
+        coords.Add(y2);
+    
     }
     public override void DrawEllipse(Graphics Canvas, int x, int y, int width, int height)
     {
-        attributeDrawer.Add("<circle cx=\"" + x + "\" cy=\"" + y + "\" r=\"" + width + "\" stroke-width=\"1\" fill = \"none\" stroke = \"red\" /> ");
+        attributeDrawer.Add("<circle cx=\"" + x + "\" cy=\"" + y + "\" r=\"" + width + "\" stroke-width=\"1\" fill = \"none\" stroke = \"black\" /> ");
     }
+
 
     public void MakeFile(object sender, EventArgs e)
     {
