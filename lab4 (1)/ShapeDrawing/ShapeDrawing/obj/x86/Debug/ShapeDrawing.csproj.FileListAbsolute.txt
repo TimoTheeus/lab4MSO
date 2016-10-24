@@ -5,3 +5,10 @@ C:\Users\Timo\Downloads\lab4 (1)\ShapeDrawing\ShapeDrawing\obj\x86\Debug\ShapeDr
 C:\Users\Timo\Downloads\lab4 (1)\ShapeDrawing\ShapeDrawing\obj\x86\Debug\ShapeDrawing.csproj.GenerateResource.Cache
 C:\Users\Timo\Downloads\lab4 (1)\ShapeDrawing\ShapeDrawing\obj\x86\Debug\ShapeDrawing.exe
 C:\Users\Timo\Downloads\lab4 (1)\ShapeDrawing\ShapeDrawing\obj\x86\Debug\ShapeDrawing.pdb
+C:\Users\Matthijs\Documents\GitHub\lab4MSO\lab4 (1)\ShapeDrawing\ShapeDrawing\bin\Debug\ShapeDrawing.exe
+C:\Users\Matthijs\Documents\GitHub\lab4MSO\lab4 (1)\ShapeDrawing\ShapeDrawing\bin\Debug\ShapeDrawing.pdb
+C:\Users\Matthijs\Documents\GitHub\lab4MSO\lab4 (1)\ShapeDrawing\ShapeDrawing\obj\x86\Debug\ShapeDrawing.csprojResolveAssemblyReference.cache
+C:\Users\Matthijs\Documents\GitHub\lab4MSO\lab4 (1)\ShapeDrawing\ShapeDrawing\obj\x86\Debug\ShapeDrawing.Properties.Resources.resources
+C:\Users\Matthijs\Documents\GitHub\lab4MSO\lab4 (1)\ShapeDrawing\ShapeDrawing\obj\x86\Debug\ShapeDrawing.csproj.GenerateResource.Cache
+C:\Users\Matthijs\Documents\GitHub\lab4MSO\lab4 (1)\ShapeDrawing\ShapeDrawing\obj\x86\Debug\ShapeDrawing.exe
+C:\Users\Matthijs\Documents\GitHub\lab4MSO\lab4 (1)\ShapeDrawing\ShapeDrawing\obj\x86\Debug\ShapeDrawing.pdb

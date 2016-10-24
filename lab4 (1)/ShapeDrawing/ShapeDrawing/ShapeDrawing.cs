@@ -20,7 +20,7 @@ public class ShapeDrawingForm : Form
 		menu.DropDownItems.Add("Export...", null, this.exportHandler);
         menu.DropDownItems.Add("Exit", null, this.closeHandler);
         menuStrip.Items.Add(menu);
-
+        
         this.Controls.Add(menuStrip);
 		// Some basic settings
 		Text = "Shape Drawing and Converter";
@@ -58,25 +58,30 @@ public class ShapeDrawingForm : Form
     // What to do when the user wants to export a TeX file
 	private void exportHandler (object sender, EventArgs e)
 	{
-		Stream stream;
-		SaveFileDialog saveFileDialog = new SaveFileDialog();
+        SVGWriter svgWriter = new SVGWriter(sender, e);
+        foreach (Shape shape in shapes)
+            shape.Draw(CreateGraphics(), svgWriter);
+        svgWriter.MakeFile(sender, e);
 
-		saveFileDialog.Filter = "TeX files|(*.tex)";
-		saveFileDialog.RestoreDirectory = true;
+  //      Stream stream;
+		//SaveFileDialog saveFileDialog = new SaveFileDialog();
+
+		//saveFileDialog.Filter = "TeX files|(*.tex)";
+		//saveFileDialog.RestoreDirectory = true;
 		
-		if(saveFileDialog.ShowDialog() == DialogResult.OK)
-		{
-			if((stream = saveFileDialog.OpenFile()) != null)
-			{
-				// Insert code here that generates the string of LaTeX
-                //   commands to draw the shapes
-                using(StreamWriter writer = new StreamWriter(stream))
-                {
-                        // Write strings to the file here using:
-                        //   writer.WriteLine("Hello World!");
-                }				
-			}
-		}
+		//if(saveFileDialog.ShowDialog() == DialogResult.OK)
+		//{
+		//	if((stream = saveFileDialog.OpenFile()) != null)
+		//	{
+		//		// Insert code here that generates the string of LaTeX
+  //              //   commands to draw the shapes
+  //              using(StreamWriter writer = new StreamWriter(stream))
+  //              {
+  //                      // Write strings to the file here using:
+  //                      //   writer.WriteLine("Hello World!");
+  //              }				
+		//	}
+		//}
 	}
 
     private void OnPaint(object sender, PaintEventArgs e)
