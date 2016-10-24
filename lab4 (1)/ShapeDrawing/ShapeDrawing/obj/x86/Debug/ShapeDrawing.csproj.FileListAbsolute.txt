@@ -1,0 +1,7 @@
+C:\Users\Timo\Downloads\lab4 (1)\ShapeDrawing\ShapeDrawing\bin\Debug\ShapeDrawing.exe
+C:\Users\Timo\Downloads\lab4 (1)\ShapeDrawing\ShapeDrawing\bin\Debug\ShapeDrawing.pdb
+C:\Users\Timo\Downloads\lab4 (1)\ShapeDrawing\ShapeDrawing\obj\x86\Debug\ShapeDrawing.csprojResolveAssemblyReference.cache
+C:\Users\Timo\Downloads\lab4 (1)\ShapeDrawing\ShapeDrawing\obj\x86\Debug\ShapeDrawing.Properties.Resources.resources
+C:\Users\Timo\Downloads\lab4 (1)\ShapeDrawing\ShapeDrawing\obj\x86\Debug\ShapeDrawing.csproj.GenerateResource.Cache
+C:\Users\Timo\Downloads\lab4 (1)\ShapeDrawing\ShapeDrawing\obj\x86\Debug\ShapeDrawing.exe
+C:\Users\Timo\Downloads\lab4 (1)\ShapeDrawing\ShapeDrawing\obj\x86\Debug\ShapeDrawing.pdb
